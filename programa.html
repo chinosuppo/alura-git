@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+
+	<script>
+		/*document.write("El promedio de edad de Juan, Pedro y Carlos es...<br>");
+		document.write((20+25+15)/3);*/
+
+		/*document.write("La suma de las edades de Juan, Pedro y Carlos es..." + (20+25+15));*/
+
+		/*document.write("Juan nacio en el año... <br>");
+		document.write(2021-20);
+		document.write("<br>");
+		document.write("<br>");
+		document.write("Pedro nacio en el año... <br>");
+		document.write(2021-25);
+		document.write("<br>");
+		document.write("<br>");
+		document.write("Carlos nacio en el año... <br>");
+		document.write(2021-15); */
+
+		function saltarLinea() {
+			document.write("<br> <br>");
+		}
+
+
+		function imprimir(frase) {
+
+			document.write(frase);
+			saltarLinea();
+		}
+
+		var anio = 2021;
+
+		imprimir("Juan tiene: " + (anio-2001) + " años");
+
+		imprimir("Pedro tiene: " + (anio-1996) + " años");
+
+		imprimir("Carlos tiene: " + (anio-2006) + " años");
+
+		//Este codigo calcula las edades de Juan, Pedro y Carlos
+
+		/*document.write("Juan tiene: " + (anio-2001) + " años" + saltoDeLinea);
+		document.write("Pedro tiene: " + (anio-1996) + " años" + saltoDeLinea);
+		document.write("Carlos tiene: " + (anio-2006) + " años" + saltoDeLinea);*/
+		
+		//saltarLinea();
+
+		anio = 2022;
+
+		/*document.write("Jimena tiene: " + (anio-2010) + " años <br>");
+		document.write("Paula tiene: " + (anio-1995) + " años <br>");
+		document.write("Laura tiene: " + (anio-2005) + " años <br>");*/
+		
+		saltarLinea();
+
+		var edadJimena = 12;
+		var edadPaula = 27;
+		var edadLaura = 17;
+
+		var nombre1 = "Jimena";
+		var nombre2 = "Paula";
+		var nombre3 = "Laura";
+
+		var promedio = (edadJimena + edadPaula + edadLaura)/3;
+
+		document.write("El promedio de las edades de " + nombre1 + ", " + nombre2 + " y " + nombre3 + " es: " + Math.round(promedio));
+
+
+
+	</script>
+
+</body>
+</html>

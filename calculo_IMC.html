@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Calculo de IMC</title>
+</head>
+<body>
+
+	<h1>Programa para calcular IMC</h1>
+
+	<script>
+
+		function saltarLinea() {
+			document.write("<br> <br>");
+		}
+
+
+		function imprimir(frase) {
+
+			document.write(frase);
+			saltarLinea();
+		}
+
+		function calcularIMC(peso,altura) {
+			imc = peso / (altura * altura);
+
+			return (imc);
+
+			//imprimir("El IMC de: " + nombre + " es " + Math.round(imc));
+		}
+
+		nombre = prompt("Informe su nombre");
+		pesoInformado = prompt(nombre + " informe su peso");
+		alturaInformada = prompt(nombre + " informe su altura");
+
+		imcCalculado = calcularIMC(pesoInformado,alturaInformada);
+
+		imcCalculado = imcCalculado.toFixed(2);
+
+		imprimir(nombre + " el IMC calculado es: " + imcCalculado);
+
+
+		/*var imcCarlos = calcularIMC(95,1.85);
+		var imcCandela = calcularIMC(70,1.72);
+
+		imprimir("El promedio del IMC calculado de Carlos y Candela es: " + Math.round(imcCarlos+imcCandela)/2);*/
+
+		//imprimir("El promedio del IMC calculado de Carlos y Candela es: " + Math.round(calcularIMC(95,1.85)+calcularIMC(70,1.72))/2);
+
+		//Otra forma de solucion es la de arriba, sin crear dos variables y reutilizar la funcion de calcularIMC
+
+		if (imcCalculado < 18.5) {
+
+			imprimir("Bajo peso");
+		}
+
+		if (imcCalculado >= 18.5) {
+			if (imcCalculado < 25) {
+
+				imprimir("Peso normal");
+			}
+		}
+
+
+		if (imcCalculado >= 25) {
+			if(imcCalculado < 30) {
+
+				imprimir("Sobrepeso");
+			}
+		}
+
+
+		if (imcCalculado >= 30) {
+			if(imcCalculado < 35) {
+
+				imprimir("Obesidad tipo 1");
+			}
+		}
+
+		if (imcCalculado >= 35) {
+			if(imcCalculado < 40) {
+
+				imprimir("Obesidad tipo 2");
+			}
+		}
+
+		if (imcCalculado >= 40) {
+
+			imprimir("Obesidad tipo 3");
+		}
+
+		</script>
+
+</body>
+</html>
